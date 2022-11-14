@@ -1,0 +1,72 @@
+form {
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  text-align: center;
+}
+
+li {
+  font-size: 11px;
+}
+
+h3 {
+  text-align: center;
+  padding: 10px;
+  font-size: 24px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.weather-app {
+  border: solid 1px;
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.forecast {
+  text-align: center;
+}
+
+.day {
+  font-size: 11px;
+}
+
+#sky {
+  text-transform: capitalize;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+#city {
+  font-size: 26px;
+  text-align: center;
+  line-height: 1px;
+}
+
+#temp {
+  text-align: center;
+  font-size: 80px;
+}
+
+#units {
+  font-size: 20px;
+  position: relative;
+  top: -40px;
+  left: 70px;
+  text-align: center;
+}
+
+#celsius {
+  text-decoration: none;
+}
+
+#fahrenheit {
+  text-decoration: none;
+}
