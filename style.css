@@ -35,6 +35,11 @@ a {
 .day {
   font-size: 11px;
 }
+.source {
+  display: block;
+  text-align: center;
+  margin-right: 490px;
+}
 
 #sky {
   text-transform: capitalize;
