@@ -22,6 +22,7 @@ h4 {
   line-height: 1px;
   font-size: 20px;
   padding-top: 0px;
+  font-weight: 300;
 }
 
 a {
@@ -49,13 +50,17 @@ a {
   text-decoration: none;
 }
 
+.btn-secondary {
+  line-height: 16px;
+}
+
 #sky {
   text-transform: capitalize;
   text-align: center;
   font-size: 14px;
   line-height: 1px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 1px;
+  padding-bottom: 40px;
 }
 #city {
   font-size: 35px;
