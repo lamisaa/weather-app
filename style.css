@@ -14,7 +14,14 @@ li {
 h3 {
   text-align: center;
   padding: 10px;
-  font-size: 24px;
+  font-size: 20px;
+}
+
+h4 {
+  text-align: center;
+  line-height: 1px;
+  font-size: 20px;
+  padding-top: 0px;
 }
 
 a {
@@ -51,9 +58,10 @@ a {
   padding-bottom: 10px;
 }
 #city {
-  font-size: 26px;
+  font-size: 35px;
   text-align: center;
   line-height: 1px;
+  padding: 20px;
 }
 
 #temp {

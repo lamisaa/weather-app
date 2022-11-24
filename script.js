@@ -3,9 +3,11 @@
 let now = new Date();
 
 let h3 = document.querySelector("h3");
+let h4 = document.querySelector("h4");
 
 let date = now.getDate();
 let hours = now.getHours();
+let minutes = now.getMinutes();
 let days = [
   "Sunday",
   "Monday",
@@ -35,6 +37,7 @@ let months = [
 let month = months[now.getMonth()];
 
 h3.innerHTML = `${day}, ${month} ${date}`;
+h4.innerHTML = `${hours}:${minutes}`;
 
 // current temperature
 
