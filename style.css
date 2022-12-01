@@ -17,14 +17,6 @@ h3 {
   font-size: 20px;
 }
 
-h4 {
-  text-align: center;
-  line-height: 1px;
-  font-size: 20px;
-  padding-top: 0px;
-  font-weight: 300;
-}
-
 a {
   text-decoration: none;
 }
@@ -88,4 +80,12 @@ a {
 
 #fahrenheit {
   text-decoration: none;
+}
+
+#windSpeed {
+  font-size: 15px;
+}
+
+#humidity {
+  font-size: 15px;
 }
