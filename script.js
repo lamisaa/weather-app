@@ -47,6 +47,7 @@ h3.innerHTML = `${day}, ${hours}:${minutes}`;
 function showTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
   let autoLocation = response.data.name;
+
   let humidData = response.data.main.humidity;
   let speedData = Math.round(response.data.wind.speed);
 
