@@ -47,8 +47,6 @@ h3.innerHTML = `${day}, ${hours}:${minutes}`;
 function showTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
   let autoLocation = response.data.name;
-  let tempMax = Math.round(response.data.main.temp_max);
-  let tempMin = Math.round(response.data.main.temp_min);
   let humidData = response.data.main.humidity;
   let speedData = Math.round(response.data.wind.speed);
 
@@ -65,12 +63,6 @@ function showTemperature(response) {
 
   let wind = document.querySelector("#windSpeed");
   wind.innerHTML = `<i class="fa-solid fa-wind wind"></i> ${speedData} km/ph`;
-
-  let tempMaximum = document.querySelector("#max");
-  tempMaximum.innerHTML = `${tempMax}º <i class="fa-solid fa-arrow-up"></i>`;
-
-  let tempMinimum = document.querySelector("#min");
-  tempMinimum.innerHTML = `${tempMin}º <i class="fa-solid fa-arrow-down"></i>`;
 
   let desc = document.querySelector("#sky");
   desc.innerHTML = `${weatherDesc}`;
