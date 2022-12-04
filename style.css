@@ -22,9 +22,9 @@ a {
 }
 
 img {
-  width: 120px;
-  position: relative;
-  top: -35px;
+  margin-right: 5px;
+  height: 64px;
+  width: 64px;
 }
 
 .weather-app {
@@ -69,15 +69,13 @@ img {
 
 #temp {
   text-align: center;
-  font-size: 100px;
+  font-size: 90px;
 }
 
 #units {
-  font-size: 20px;
   position: relative;
-  top: -40px;
-  left: 70px;
-  text-align: center;
+  font-size: 16px;
+  top: -34px;
 }
 
 #celsius {
