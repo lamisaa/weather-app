@@ -86,6 +86,12 @@ function showFahrenheitTemp(event) {
   tempElement.innerHTML = Math.round(fahrenheitTemp);
 }
 
+function showCelsiusTemp(event) {
+  event.preventDefault();
+  let tempElement = document.querySelector("#temp");
+  tempElement.innerHTML = Math.round(celsiusTemp);
+}
+
 function showPosition(position) {
   let apiKey = "8ca7dd4e61360b90fb66918853670e48";
   let latitude = position.coords.latitude;
@@ -123,5 +129,8 @@ searchForm.addEventListener("submit", handleSubmit);
 
 let fahrenheitLink = document.querySelector("#fahrenheit");
 fahrenheitLink.addEventListener("click", showFahrenheitTemp);
+
+let celsiusLink = document.querySelector("#celsius");
+celsiusLink.addEventListener("click", showCelsiusTemp);
 
 searchCity("London");
