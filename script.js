@@ -45,7 +45,9 @@ h3.innerHTML = `${day}, ${hours}:${minutes}`;
 // current temperature
 
 function showTemperature(response) {
-  let temperature = Math.round(response.data.main.temp);
+  celsiusTemp = response.data.main.temp;
+
+  let temperature = Math.round(celsiusTemp);
   let autoLocation = response.data.name;
 
   let humidData = response.data.main.humidity;
@@ -75,6 +77,13 @@ function showTemperature(response) {
     "src",
     `http://openweathermap.org/img/wn/${weatherIcon}@2x.png`
   );
+}
+
+function showFahrenheitTemp(event) {
+  event.preventDefault();
+  let tempElement = document.querySelector("#temp");
+  let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
+  tempElement.innerHTML = Math.round(fahrenheitTemp);
 }
 
 function showPosition(position) {
@@ -107,7 +116,12 @@ function handleSubmit(event) {
   searchCity(city);
 }
 
+let celsiusTemp = null;
+
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
+
+let fahrenheitLink = document.querySelector("#fahrenheit");
+fahrenheitLink.addEventListener("click", showFahrenheitTemp);
 
 searchCity("London");
