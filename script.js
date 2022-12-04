@@ -53,6 +53,8 @@ function showTemperature(response) {
 
   let weatherDesc = response.data.weather[0].description;
 
+  let weatherIcon = response.data.weather[0].icon;
+
   let currentTemperature = document.querySelector("#temp");
   currentTemperature.innerHTML = `${temperature}`;
 
@@ -67,6 +69,12 @@ function showTemperature(response) {
 
   let desc = document.querySelector("#sky");
   desc.innerHTML = `${weatherDesc}`;
+
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${weatherIcon}@2x.png`
+  );
 }
 
 function showPosition(position) {
