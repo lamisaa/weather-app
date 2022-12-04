@@ -21,6 +21,12 @@ a {
   text-decoration: none;
 }
 
+img {
+  width: 120px;
+  position: relative;
+  top: -35px;
+}
+
 .weather-app {
   border: solid 1px;
   max-width: 750px;
