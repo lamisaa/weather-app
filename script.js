@@ -42,6 +42,14 @@ let month = months[now.getMonth()];
 
 h3.innerHTML = `${day}, ${hours}:${minutes}`;
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[day];
+}
+
 function displayForecast(response) {
   let forecast = response.data.daily;
 
@@ -49,30 +57,37 @@ function displayForecast(response) {
 
   let forecastHTML = `<div class="row">`;
 
-  forecast.forEach(function (forecastDay) {
-    forecastHTML =
-      forecastHTML +
-      `
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 6) {
+      forecastHTML =
+        forecastHTML +
+        `
             <div class="col-2">
-              <div class="day">${forecastDay.dt}</div>
+              <div class="day">${formatDay(forecastDay.dt)}</div>
               <img
-                src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
+                src="http://openweathermap.org/img/wn/${
+                  forecastDay.weather[0].icon
+                }@2x.png"
                 alt=""
                 width="42"
               />
               <div class="day-temp">
-                <span class="forecast-low-temp">${forecastDay.temp.min}°</span>
-                <span class="forecast-high-temp"></span> ${forecastDay.temp.max}°
+                <span class="forecast-low-temp">${Math.round(
+                  forecastDay.temp.min
+                )}°</span>
+                <span class="forecast-high-temp"></span> ${Math.round(
+                  forecastDay.temp.max
+                )}°
               </div>
             </div>
           `;
+    }
   });
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
 
 function getForecast(coordinates) {
-  console.log(coordinates);
   let apiKey = "8ca7dd4e61360b90fb66918853670e48";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
 
