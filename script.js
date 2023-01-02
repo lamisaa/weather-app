@@ -131,13 +131,6 @@ function showTemperature(response) {
   getForecast(response.data.coord);
 }
 
-function showFahrenheitTemp(event) {
-  event.preventDefault();
-  let tempElement = document.querySelector("#temp");
-  let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
-  tempElement.innerHTML = Math.round(fahrenheitTemp);
-}
-
 function showCelsiusTemp(event) {
   event.preventDefault();
   let tempElement = document.querySelector("#temp");
@@ -174,15 +167,7 @@ function handleSubmit(event) {
   searchCity(city);
 }
 
-let celsiusTemp = null;
-
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
-
-let fahrenheitLink = document.querySelector("#fahrenheit");
-fahrenheitLink.addEventListener("click", showFahrenheitTemp);
-
-let celsiusLink = document.querySelector("#celsius");
-celsiusLink.addEventListener("click", showCelsiusTemp);
 
 searchCity("London");
