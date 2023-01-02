@@ -22,9 +22,7 @@ a {
 }
 
 img {
-  margin-right: 5px;
-  width: 100px;
-  top: -30px;
+  align-self: center;
 }
 
 .weather-app {
@@ -58,6 +56,12 @@ img {
   line-height: 16px;
 }
 
+.weather-temperature {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
 #sky {
   text-transform: capitalize;
   text-align: center;
@@ -74,15 +78,12 @@ img {
 }
 
 #temp {
-  text-align: center;
-  font-size: 90px;
+  font-size: 70px;
 }
 
 #units {
-  position: relative;
-  font-size: 20px;
-  top: -120px;
-  left: 180px;
+  font-size: 30px;
+  align-self: center;
 }
 
 #celsius {
