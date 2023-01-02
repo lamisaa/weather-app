@@ -23,8 +23,8 @@ a {
 
 img {
   margin-right: 5px;
-  height: 64px;
-  width: 64px;
+  width: 100px;
+  top: -30px;
 }
 
 .weather-app {
